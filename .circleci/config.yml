@@ -6,7 +6,8 @@ jobs:
 
 workflows:
   staging-deply:
-    - node:
-        filters:
-          branches:
-            only: staging
+    jobs:
+      - node:
+          filters:
+            branches:
+              only: staging
