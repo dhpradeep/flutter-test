@@ -1,6 +1,8 @@
 version: 2.1
 jobs:
   node:
+    docker:
+      - image: cimg/node:12.16
     steps:
       - run: echo 'hello world'
 
