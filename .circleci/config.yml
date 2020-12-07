@@ -1,9 +1,12 @@
-version: 2
+version: 2.1
 jobs:
-  build:
-    docker:
-      - image: cirrusci/flutter
+  node:
     steps:
-      - checkout
-      - run: flutter doctor
-      - run: flutter -v build apk
+      - run: echo 'hello world'
+
+workflows:
+  staging-deply:
+    - node:
+        filters:
+          branches:
+            only: staging
